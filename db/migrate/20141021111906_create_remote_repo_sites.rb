@@ -1,4 +1,4 @@
-class CreateRemoteRepoSites < ActiveRecord::Migration
+class CreateRemoteRepoSites < ActiveRecord::Migration[5.1]
   def change
     create_table :remote_repo_sites do |t|
       t.string :type
