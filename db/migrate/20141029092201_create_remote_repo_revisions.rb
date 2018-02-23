@@ -15,7 +15,7 @@ class CreateRemoteRepoRevisions < ActiveRecord::Migration[5.1]
       t.datetime :created_at
     end
 
-    add_index :remote_repo_revisions, :remote_repo_id
+    add_index :remote_repo_revisions, :remote_repo_id unless index_exists?(:remote_repo_revisions, :remote_repo_id)
     add_index :remote_repo_revisions, [:remote_repo_id, :sha]
   end
 end
