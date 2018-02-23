@@ -7,6 +7,6 @@ class CreateRemoteRepoRefsRevs < ActiveRecord::Migration[5.1]
       t.datetime :created_at
     end
 
-    add_index :remote_repo_refs_revs, :remote_repo_revision_id
+    add_index :remote_repo_refs_revs, :remote_repo_revision_id unless index_exists?(:remote_repo_refs_revs, :remote_repo_revision_id)
   end
 end
