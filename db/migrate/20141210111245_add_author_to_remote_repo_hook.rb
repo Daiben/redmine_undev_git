@@ -1,4 +1,4 @@
-class AddAuthorToRemoteRepoHook < ActiveRecord::Migration
+class AddAuthorToRemoteRepoHook < ActiveRecord::Migration[5.1]
   def change
     add_column :remote_repo_hooks, :author_string, :string
     add_column :remote_repo_hooks, :author_date, :datetime
