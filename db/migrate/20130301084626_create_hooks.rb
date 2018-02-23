@@ -1,4 +1,4 @@
-class CreateHooks < ActiveRecord::Migration
+class CreateHooks < ActiveRecord::Migration[5.1]
   def change
     create_table :hooks, force: true do |t|
       t.string :type, null: false
