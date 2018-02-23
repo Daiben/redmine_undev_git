@@ -1,4 +1,4 @@
-class CreateRemoteRepoRelatedIssues < ActiveRecord::Migration
+class CreateRemoteRepoRelatedIssues < ActiveRecord::Migration[5.1]
   def change
     create_table :remote_repo_related_issues do |t|
       t.references :remote_repo_revision
