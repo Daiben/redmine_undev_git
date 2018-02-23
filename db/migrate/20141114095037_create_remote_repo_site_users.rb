@@ -7,7 +7,7 @@ class CreateRemoteRepoSiteUsers < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :remote_repo_site_users, :remote_repo_site_id
+    add_index :remote_repo_site_users, :remote_repo_site_id unless index_exists?(:remote_repo_site_users, :remote_repo_site_id)
     add_index :remote_repo_site_users, [:remote_repo_site_id, :email]
   end
 end
