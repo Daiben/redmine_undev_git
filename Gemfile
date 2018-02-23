@@ -2,7 +2,7 @@ gem 'deface', '1.3.0'
 gem 'hashie', '3.5.7'
 gem 'mysql2', '~> 0.4.6'
 gem 'rack-openid'
-gem 'coderay'
+gem 'coderay', "~> 1.1.1"
 gem 'mimemagic'
 gem 'rbpdf'
 
