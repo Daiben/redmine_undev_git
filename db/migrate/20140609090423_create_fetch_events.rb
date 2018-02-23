@@ -7,6 +7,6 @@ class CreateFetchEvents < ActiveRecord::Migration[5.1]
       t.string :error_message
       t.timestamps
     end
-    add_index :fetch_events, :repository_id
+    add_index :fetch_events, :repository_id unless index_exists?(:fetch_events, :repository_id)
   end
 end
