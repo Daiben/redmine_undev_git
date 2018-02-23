@@ -1,4 +1,4 @@
-class ChangeRepositoriesExtraInfoLimit < ActiveRecord::Migration
+class ChangeRepositoriesExtraInfoLimit < ActiveRecord::Migration[5.1]
   def change
     if defined?(ActiveRecord::ConnectionAdapters::MysqlAdapter) &&
         ActiveRecord::Base.connection.instance_of?(
