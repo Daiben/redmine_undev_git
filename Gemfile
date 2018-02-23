@@ -1,4 +1,4 @@
-gem 'deface', '> 1.0.0'
+gem 'deface'
 gem 'hashie'
 gem 'mysql2'
 gem 'rack-openid'
@@ -7,9 +7,9 @@ gem 'mimemagic'
 gem 'rbpdf'
 
 group :development do
-  gem 'diffy'
+  gem 'diffy', '3.2.0'
 end
 
 group :test do
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '4.9.0'
 end
