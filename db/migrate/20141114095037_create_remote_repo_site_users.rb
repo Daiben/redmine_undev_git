@@ -1,4 +1,4 @@
-class CreateRemoteRepoSiteUsers < ActiveRecord::Migration
+class CreateRemoteRepoSiteUsers < ActiveRecord::Migration[5.1]
   def change
     create_table :remote_repo_site_users do |t|
       t.references :remote_repo_site
