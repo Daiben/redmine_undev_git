@@ -1,4 +1,4 @@
-class AddCommitterEmailToRemoteRepoRevision < ActiveRecord::Migration
+class AddCommitterEmailToRemoteRepoRevision < ActiveRecord::Migration[5.1]
   def change
     remove_column :remote_repo_revisions, :committer_string
     remove_column :remote_repo_revisions, :author_string
