@@ -1,4 +1,4 @@
-class CreateFetchEvents < ActiveRecord::Migration
+class CreateFetchEvents < ActiveRecord::Migration[5.1]
   def change
     create_table :fetch_events do |t|
       t.references :repository
