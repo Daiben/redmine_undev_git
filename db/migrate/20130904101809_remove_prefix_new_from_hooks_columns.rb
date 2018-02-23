@@ -1,4 +1,4 @@
-class RemovePrefixNewFromHooksColumns < ActiveRecord::Migration
+class RemovePrefixNewFromHooksColumns < ActiveRecord::Migration[5.1]
   def change
     rename_column :hooks, :new_status_id, :status_id
     rename_column :hooks, :new_done_ratio, :done_ratio
