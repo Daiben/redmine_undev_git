@@ -7,6 +7,6 @@ class CreateRemoteRepoRelatedIssues < ActiveRecord::Migration[5.1]
       t.datetime :created_at
     end
 
-    add_index :remote_repo_related_issues, :issue_id
+    add_index :remote_repo_related_issues, :issue_id unless index_exists?(:remote_repo_related_issues, :issue_id)
   end
 end
