@@ -11,6 +11,6 @@ class CreateRemoteRepos < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :remote_repos, :remote_repo_site_id
+    add_index :remote_repos, :remote_repo_site_id unless index_exists?(:remote_repos, :remote_repo_site_id)
   end
 end
