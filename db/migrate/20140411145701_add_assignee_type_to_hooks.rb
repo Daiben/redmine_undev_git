@@ -1,4 +1,4 @@
-class AddAssigneeTypeToHooks < ActiveRecord::Migration
+class AddAssigneeTypeToHooks < ActiveRecord::Migration[5.1]
   def up
     add_column :hooks, :assignee_type, :string, default: HookBase::NOBODY
     update "UPDATE hooks SET assignee_type='#{HookBase::NOBODY}' WHERE assignee_type IS NULL AND assigned_to_id IS NULL"
